@@ -1,0 +1,15 @@
+services:
+  php:
+    build: .
+    volumes:
+      - ./app:/var/www/projet
+    ports:
+      - "9000:9000"
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./app:/var/www/projet
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
