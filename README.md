@@ -1,6 +1,8 @@
 # projet
 
-composer require twi
+projet en Sqlite
+
+composer require twig
 
 composer require --dev symfony/maker-bundle
 
